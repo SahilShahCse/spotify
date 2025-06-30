@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ImageTitleDescriptionCard extends StatelessWidget {
-  final String title;
+  final String? title;
   final String description;
 
   final int size;
 
   const ImageTitleDescriptionCard({
     super.key,
-    required this.title,
+    this.title,
     required this.description,
     this.size = 150,
   });
@@ -21,10 +21,11 @@ class ImageTitleDescriptionCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(color: Colors.blue, child: AspectRatio(aspectRatio: 1 / 1)),
-          Text(title, maxLines: 1),
+          SizedBox(height: 6),
+          if(title != null) Text(title!, maxLines: 1),
           Text(
             description,
-            maxLines: 1,
+            maxLines:(title != null)? 1 : 2,
             style: TextStyle(
               color: Theme.of(context).colorScheme.primary.withAlpha(100),
             ),
