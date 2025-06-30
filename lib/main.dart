@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/themes/dark_theme.dart';
+import 'package:spotify/widgets/Image_title_description_card.dart';
 import 'package:spotify/widgets/ads_card.dart';
 import 'package:spotify/widgets/image_title_card.dart';
 import 'package:spotify/widgets/title_text.dart';
@@ -23,7 +24,6 @@ class App extends StatelessWidget {
               spacing: 12,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TitleText('Jump back In'),
                 Row(
                   spacing: 12,
                   children: [
@@ -31,7 +31,32 @@ class App extends StatelessWidget {
                     ImageTitleCard('Darshan Raval'),
                   ],
                 ),
+                Row(
+                  spacing: 12,
+                  children: [
+                    ImageTitleCard('Darshan Raval'),
+                    ImageTitleCard('Darshan Raval'),
+                  ],
+                ),
+                Row(
+                  spacing: 12,
+                  children: [
+                    ImageTitleCard('Darshan Raval'),
+                    ImageTitleCard('Darshan Raval'),
+                  ],
+                ),
+                Row(
+                  spacing: 12,
+                  children: [
+                    ImageTitleCard('Darshan Raval'),
+                    ImageTitleCard('Darshan Raval'),
+                  ],
+                ),
+                SizedBox(),
                 AdsCard('Digster India'),
+                SizedBox(),
+                TitleText('Jump back in'),
+                ImageTitleDescriptionCard(title: 'Race Gurram', description: 'Thaman S',),
               ],
             ),
           ),

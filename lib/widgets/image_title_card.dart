@@ -20,9 +20,12 @@ class ImageTitleCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6),
               ),
             ),
-            Text(
-              title,
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+            Expanded(
+              child: Text(
+                title,
+                maxLines: 2,
+                style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),

@@ -7,6 +7,7 @@ ThemeData darkTheme = ThemeData(
   colorScheme: ColorScheme.dark(
     surface: Colors.white12,
     surfaceBright: Colors.green,
+    primary: Colors.white,
   ),
 
   filledButtonTheme: FilledButtonThemeData(
