@@ -4,16 +4,19 @@ class ImageTitleDescriptionCard extends StatelessWidget {
   final String title;
   final String description;
 
+  final int size;
+
   const ImageTitleDescriptionCard({
     super.key,
     required this.title,
     required this.description,
+    this.size = 150,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 150,
+      width: size.toDouble(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
