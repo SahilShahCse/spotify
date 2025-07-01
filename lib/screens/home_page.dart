@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
     'All Trending Songs',
     'Your Top Songs',
     'Aditya Gadvi Songs',
-    'Your Top Songs',
-    'Aditya Gadvi Songs',
     'but i see her in the back of my mind, i see her',
     'Bollywood Dance Music',
   ];

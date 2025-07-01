@@ -35,10 +35,10 @@ class _MainScreenState extends State<MainScreen> {
           /// PageView
           PageView(
             controller: _pageController,
-            physics:
-                const NeverScrollableScrollPhysics(), // Disable swipe if needed
+            physics: const NeverScrollableScrollPhysics(),
             children: [HomePage(), HomePage(), HomePage(), HomePage(), HomePage()],
           ),
+
 
           /// Custom Bottom Navigation Bar
           Positioned(
@@ -51,7 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Theme.of(context).scaffoldBackgroundColor.withAlpha(125),
+                    Theme.of(context).scaffoldBackgroundColor.withAlpha(175),
                     Theme.of(context).scaffoldBackgroundColor,
                   ],
                 ),

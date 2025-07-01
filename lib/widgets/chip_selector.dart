@@ -15,7 +15,7 @@ class _ChipSelectorState extends State<ChipSelector> {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      spacing: 12,
+      spacing: 8,
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         const CircleAvatar(),
