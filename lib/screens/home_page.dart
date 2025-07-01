@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/widgets/Image_title_description_card.dart';
 import 'package:spotify/widgets/ads_card.dart';
 import 'package:spotify/widgets/image_title_card.dart';
-import 'package:spotify/widgets/title_text.dart';
-
+import '../widgets/chip_selector.dart';
 import '../widgets/horizontal_music_list_section.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,13 +12,18 @@ class HomePage extends StatelessWidget {
     'All Trending Songs',
     'Your Top Songs',
     'Aditya Gadvi Songs',
+    'Your Top Songs',
+    'Aditya Gadvi Songs',
     'but i see her in the back of my mind, i see her',
     'Bollywood Dance Music',
   ];
 
   final musicList = [
     {"title": "Fitoor (Original Motion Music)", "description": "Amit Trivedi"},
-    {"title": null, "description": "Sachin-Jigar, Yo Yo Honey Singh, Badshah, Amit",},
+    {
+      "title": null,
+      "description": "Sachin-Jigar, Yo Yo Honey Singh, Badshah, Amit",
+    },
     {"title": "Kesariya", "description": "Arijit Singh"},
     {"title": null, "description": "Vishal-Shekhar, Shekhar Ravjiani"},
     {"title": "Tum Mile (Reprise)", "description": "Neeraj Shridhar"},
@@ -40,7 +43,11 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 12),
+              ChipSelector(),
+              SizedBox(height: 24),
               GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: titles.length,
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
@@ -56,7 +63,16 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 24),
               AdsCard('Digster India'),
               SizedBox(height: 24),
-              HorizontalMusicListSection(title: 'Jump back in', musicList: musicList,),
+              HorizontalMusicListSection(
+                title: 'Jump back in',
+                musicList: musicList,
+              ),
+              SizedBox(height: 24),
+              HorizontalMusicListSection(
+                title: 'Jump back in',
+                musicList: musicList,
+              ),
+              SizedBox(height: 75),
             ],
           ),
         ),

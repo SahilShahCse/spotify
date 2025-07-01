@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/screens/home_page.dart';
+import 'package:spotify/screens/main_screen.dart';
 import 'package:spotify/themes/dark_theme.dart';
 
 void main(){
@@ -14,7 +15,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: darkTheme,
-      home: HomePage(),
+      home: MainScreen(),
     );
   }
 }
