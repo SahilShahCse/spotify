@@ -38,14 +38,14 @@ class BottomBarItem extends StatelessWidget {
 
             Icon(
               icon,
-              color: selected ? primaryColor : primaryColor.withAlpha(100),
+              color: selected ? primaryColor : primaryColor.withAlpha(185),
             ),
             SizedBox(height: 2),
             Text(
               title,
               style: TextStyle(
                 fontSize: 12,
-                color: selected ? primaryColor : primaryColor.withAlpha(100),
+                color: selected ? primaryColor : primaryColor.withAlpha(185),
                 fontWeight: FontWeight.w500,
               ),
             ),

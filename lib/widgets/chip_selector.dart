@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'category_list.dart';
+
 class ChipSelector extends StatefulWidget {
   const ChipSelector({super.key});
 
@@ -19,31 +21,7 @@ class _ChipSelectorState extends State<ChipSelector> {
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         const CircleAvatar(),
-        ...categories.map((category) {
-          final isSelected = selectedCategory == category;
-          return GestureDetector(
-            onTap: () {
-              setState(() {
-                selectedCategory = category;
-              });
-            },
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              decoration: BoxDecoration(
-                color: isSelected ? Theme.of(context).colorScheme.surfaceBright : Theme.of(context).colorScheme.surface,
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: Text(
-                category,
-                style: TextStyle(
-                  color: isSelected ? Theme.of(context).scaffoldBackgroundColor : null,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          );
-        }).toList(),
+        CategoryList(categories: categories,),
       ],
     );
   }

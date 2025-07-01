@@ -10,6 +10,11 @@ ThemeData darkTheme = ThemeData(
     primary: Colors.white,
   ),
 
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.black,
+    centerTitle: false,
+  ),
+
   filledButtonTheme: FilledButtonThemeData(
     style: ButtonStyle(
       backgroundColor: WidgetStateProperty.all<Color>(Colors.white),

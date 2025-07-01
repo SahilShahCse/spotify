@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:spotify/screens/home_page.dart';
 import 'package:spotify/widgets/bottom_bar_item.dart';
 
+import 'library_page.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -36,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
           PageView(
             controller: _pageController,
             physics: const NeverScrollableScrollPhysics(),
-            children: [HomePage(), HomePage(), HomePage(), HomePage(), HomePage()],
+            children: [HomePage(), HomePage(), LibraryPage(), HomePage(), HomePage()],
           ),
 
 
@@ -51,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Theme.of(context).scaffoldBackgroundColor.withAlpha(175),
+                    Theme.of(context).scaffoldBackgroundColor.withAlpha(185),
                     Theme.of(context).scaffoldBackgroundColor,
                   ],
                 ),
